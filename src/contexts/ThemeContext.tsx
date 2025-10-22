@@ -16,9 +16,9 @@ interface ThemeContextType {
 }
 
 const defaultTheme: Theme = {
-  mode: 'dark',
+  mode: 'light',
   accentColor: 'indigo',
-  backgroundStyle: 'gradient',
+  backgroundStyle: 'minimal',
   transparency: 0.15,
   soundEnabled: true
 };

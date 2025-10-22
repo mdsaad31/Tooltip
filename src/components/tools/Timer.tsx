@@ -412,7 +412,7 @@ export const Timer: React.FC<TimerProps> = ({ className = '' }) => {
         subtitle="Multi-purpose timing tool"
         icon={<TimerIcon className="w-5 h-5" />}
         actions={
-          <div className="flex space-x-1">
+          <div className="flex flex-wrap gap-1">
             <GlassButton
               variant={state.mode === 'stopwatch' ? 'primary' : 'ghost'}
               size="sm"

@@ -435,7 +435,7 @@ export const Calculator: React.FC<CalculatorProps> = ({ className = '' }) => {
         subtitle="Full-featured calculator with history"
         icon={<span className="text-lg">🧮</span>}
         actions={
-          <div className="flex space-x-1">
+          <div className="flex flex-wrap gap-1">
             <GlassButton
               variant={state.mode === 'basic' ? 'primary' : 'ghost'}
               size="sm"
