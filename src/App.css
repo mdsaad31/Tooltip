@@ -1,0 +1,128 @@
+/* CSS Custom Properties for Dynamic Theming */
+:root {
+  --accent-primary: #6366f1;
+  --accent-secondary: #818cf8;
+  --theme-mode: dark;
+  --bg-style: gradient;
+  
+  /* Background variations */
+  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bg-animated: radial-gradient(circle at 20% 80%, #120078 0%, #9d0208 50%, #f48c06 100%);
+  --bg-minimal: linear-gradient(to bottom, #1a202c, #2d3748);
+  --bg-cosmic: linear-gradient(135deg, #2c1810 0%, #5c2751 25%, #1a1a2e 50%, #16213e 100%);
+}
+
+/* Dynamic background styles */
+body {
+  background: var(--bg-gradient);
+  transition: all 0.5s ease;
+}
+
+body[data-bg-style="gradient"] {
+  background: var(--bg-gradient);
+}
+
+body[data-bg-style="animated"] {
+  background: var(--bg-animated);
+  animation: backgroundShift 20s ease infinite;
+}
+
+body[data-bg-style="minimal"] {
+  background: var(--bg-minimal);
+}
+
+body[data-bg-style="cosmic"] {
+  background: var(--bg-cosmic);
+}
+
+body[data-bg-style="aurora"] {
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 50%, #8b5cf6 100%);
+  animation: backgroundShift 15s ease infinite;
+}
+
+body[data-bg-style="sunset"] {
+  background: linear-gradient(135deg, #f97316 0%, #ec4899 50%, #ef4444 100%);
+}
+
+body[data-bg-style="ocean"] {
+  background: linear-gradient(135deg, #1e40af 0%, #0f766e 50%, #0891b2 100%);
+}
+
+body[data-bg-style="forest"] {
+  background: linear-gradient(135deg, #166534 0%, #047857 50%, #0f766e 100%);
+}
+
+@keyframes backgroundShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Custom component styles that complement Tailwind */
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Accent color integration */
+.accent-primary {
+  color: var(--accent-primary);
+}
+
+.accent-secondary {
+  color: var(--accent-secondary);
+}
+
+.bg-accent-primary {
+  background-color: var(--accent-primary);
+}
+
+.bg-accent-secondary {
+  background-color: var(--accent-secondary);
+}
+
+.border-accent-primary {
+  border-color: var(--accent-primary);
+}
+
+.border-accent-secondary {
+  border-color: var(--accent-secondary);
+}
+
+/* Professional glass morphism enhancements */
+.glass-enhanced {
+  backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
