@@ -25,6 +25,17 @@ Tooltip is a lightweight, privacy-first, all-in-one utility app built with React
 
 ## 🚀 Quick Start
 
+### Prerequisites
+- Node.js (v20 or higher)
+- pnpm (v10 or higher)
+
+Install pnpm if you haven't already:
+```bash
+npm install -g pnpm
+```
+
+### Setup
+
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
@@ -33,22 +44,22 @@ Tooltip is a lightweight, privacy-first, all-in-one utility app built with React
 
 2. **Install dependencies**
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. **Start development server**
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 4. **Build for production**
    ```bash
-   npm run build
+   pnpm run build
    ```
 
 5. **Deploy to GitHub Pages**
    ```bash
-   npm run deploy
+   pnpm run deploy
    ```
 
 ## 🌐 GitHub Pages Deployment
@@ -60,13 +71,13 @@ This project is configured for easy deployment to GitHub Pages:
 - The app will be available at `https://<username>.github.io/Tooltip/`
 
 ### Manual Deployment
-1. Ensure you have gh-pages installed: `npm install -D gh-pages`
-2. Run: `npm run deploy`
+1. Ensure you have gh-pages installed: `pnpm install -D gh-pages`
+2. Run: `pnpm run deploy`
 3. Enable GitHub Pages in repository settings (Settings > Pages > Source: gh-pages branch)
 
 ### Configuration
 - Base path is set to `/Tooltip/` in `vite.config.ts`
-- GitHub Actions workflow is in `.github/workflows/deploy.yml`
+- GitHub Actions workflow uses pnpm (`.github/workflows/deploy.yml`)
 - Requires GitHub Pages to be enabled in repository settings
 
 ## 🎨 Design System
